@@ -203,81 +203,83 @@ if (isset($_POST['submit'])) {
             ?>
 
             <div class="card-body">
-                <div class="form-row">
-                    <div class="input-column">
-                        <div class="form-group">
-                            <label for="old_id">Old Student ID:</label>
-                            <p class="plaintext-box"><?php echo htmlspecialchars($student_id); ?></p>
-                            <input type="hidden" name="old_id" value="<?php echo $student_id; ?>">
+                <form method="POST">
+                    <div class="form-row">
+                        <div class="input-column">
+                            <div class="form-group">
+                                <label for="old_id">Old Student ID:</label>
+                                <p class="plaintext-box"><?php echo htmlspecialchars($student_id); ?></p>
+                                <input type="hidden" name="old_id" value="<?php echo $student_id; ?>">
+                            </div>
+
+                            <div class="form-group">
+                                <label for="new_id">New Student ID</label>
+                                <input type="number" class="form-control" placeholder="Enter new Student ID" name="new_id" required>
+                            </div>
+
+                            <button type="submit" name="submit" class="btn-submit">Update Student ID</button>
                         </div>
 
-                        <div class="form-group">
-                            <label for="new_id">New Student ID</label>
-                            <input type="number" class="form-control" placeholder="Enter new Student ID" name="new_id" required>
-                        </div>
+                        <div class="details-column">
+                            <div class="scrollable-box">
+                                <div class="form-group">
+                                    <label>Student Number:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($student_number); ?></p>
+                                </div>
 
-                        <button type="submit" name="submit" class="btn-submit">Update Student ID</button>
+                                <div class="form-group">
+                                    <label>First Name:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($first_name); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Middle Name:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($middle_name); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Last Name:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($last_name); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Gender:</label>
+                                    <p class="plaintext-box"><?php echo ($gender == 0) ? 'Female' : 'Male'; ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Birthday:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($birthday); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Contact Number:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($contact_number); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Street Name:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($street); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Town/City:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($town_city); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Province:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($province); ?></p>
+                                </div>
+
+                                <div class="form-group">
+                                    <label>Zip Code:</label>
+                                    <p class="plaintext-box"><?php echo htmlspecialchars($zip_code); ?></p>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="details-column">
-                        <div class="scrollable-box">
-                            <div class="form-group">
-                                <label>Student Number:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($student_number); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>First Name:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($first_name); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Middle Name:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($middle_name); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Last Name:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($last_name); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Gender:</label>
-                                <p class="plaintext-box"><?php echo ($gender == 0) ? 'Female' : 'Male'; ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Birthday:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($birthday); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Contact Number:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($contact_number); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Street Name:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($street); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Town/City:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($town_city); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Province:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($province); ?></p>
-                            </div>
-
-                            <div class="form-group">
-                                <label>Zip Code:</label>
-                                <p class="plaintext-box"><?php echo htmlspecialchars($zip_code); ?></p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                </form>
             </div>
         </div>
 
